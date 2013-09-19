@@ -229,19 +229,19 @@ describe Yell::Logger do
     it "should output a hash and message" do
       logger.info "Hello World", :test => :message
 
-      expect(line).to eq("Hello World test: message\n")
+      expect(line).to eq("Hello World test=message\n")
     end
 
     it "should output a hash and message" do
       logger.info( {:test => :message}, "Hello World" )
 
-      expect(line).to eq("test: message Hello World\n")
+      expect(line).to eq("test=message Hello World\n")
     end
 
     it "should output a hash and block" do
       logger.info(:test => :message) { "Hello World" }
 
-      expect(line).to eq("test: message Hello World\n")
+      expect(line).to eq("test=message Hello World\n")
     end
   end
 

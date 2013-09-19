@@ -134,7 +134,7 @@ describe Yell::Formatter do
     let(:event) { Yell::Event.new(logger, 1, hash) }
     subject { formatter.format(event) }
 
-    it { should eq("test: message") }
+    it { should eq("test=message") }
   end
 
 end
